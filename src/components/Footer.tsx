@@ -16,9 +16,9 @@ const Footer = () => {
         <div className="space-y-6">
           <h4 className="text-white font-bold text-lg">Get in Touch</h4>
           <div className="space-y-4 text-outline text-base">
-            <p className="flex gap-3"><span>📞</span> +44 07554350018</p>
-            <p className="flex gap-3"><span>📧</span> hbgraphics2000@gmail.com</p>
-            <p className="flex gap-3"><span>📍</span> Flat 43d 4 Mann Island, Liverpool, Merseyside, United Kingdom, L3 1BP</p>
+            <p className="flex gap-3"><span>📞</span> +88 01403794140</p>
+            <p className="flex gap-3"><span>📧</span> 0070tawsif@gmail.com</p>
+            <p className="flex gap-3"><span>📍</span> Ctg college, chawkbazar, Chattagram, Bangladesh </p>
             <button className="bg-orange-600 text-white px-6 py-2 rounded-lg font-bold flex items-center gap-2 hover:bg-orange-700 transition-colors">
               <span>📩</span> SEND A MESSAGE
             </button>

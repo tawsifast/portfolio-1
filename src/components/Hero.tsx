@@ -61,13 +61,13 @@ const Hero = () => {
           animate="visible"
         >
           <motion.h1 variants={itemVariants} className="text-4xl md:text-5xl font-bold mb-4 text-on-surface">
-            Hi, I'm Meriem
+            Hi, I'm Tawsif
           </motion.h1>
           <motion.h2 variants={itemVariants} className="text-3xl md:text-4xl font-semibold gradient-text mb-6">
-            Full stack developer
+            Frontend Developer
           </motion.h2>
           <motion.p variants={itemVariants} className="text-outline text-lg max-w-md mb-10">
-            Crafting modern, responsive, and user-friendly websites with passion and precision.
+            I build modern, responsive, and interactive web applications using React and Next.js. I focus on clean UI, smooth animations, and great user experience.
           </motion.p>
           <motion.div variants={itemVariants} className="flex flex-col sm:flex-row items-start sm:items-center gap-6">
             <button className="electric-blue-btn px-8 py-3 rounded-xl flex items-center space-x-2 font-semibold active:scale-95">

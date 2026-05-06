@@ -74,8 +74,22 @@ const About = () => {
           <div className="space-y-4 text-outline-variant leading-relaxed text-base md:text-lg">
         
             <p>
-              Convallis tincidunt posuere nibh cras non morbi in varius arcu. Et libero diam sit risus tincidunt. Urna suscipit lectus magna amet sollicitudin morbi vestibulum. Sagittis enim a congue massa dictum. Tellus fermentum elit duis non. Arcu mus cursus ornare sagittis metus viverra.
+            Hi, I’m Tawsif, a Frontend Developer who loves building modern and interactive web applications.
+
+I work mainly with React, Next.js, and Tailwind CSS, and I enjoy adding smooth animations using GSAP and Framer Motion to make websites more engaging.
+
+I focus on creating clean, responsive, and user-friendly interfaces. I like turning ideas into real projects that solve problems and look great.
+
+Currently, I’m improving my full-stack development skills and looking for opportunities to work on real-world projects and grow as a developer.
+
+
             </p>
+            <ul>
+                <li>✔ Frontend Developer (React / Next.js)</li>
+                <li>✔ Focused on UI/UX & Animations</li>
+                <li>✔ Learning Full Stack Development</li>
+                <li>✔ Open for freelance & internships</li>
+            </ul>
           
           </div>
           <button className="electric-blue-btn px-8 py-3 rounded-xl flex items-center space-x-2 font-semibold mt-4 active:scale-95">

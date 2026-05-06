@@ -22,11 +22,22 @@ const Contact = () => {
           viewport={{ once: true }}
           className="text-4xl md:text-5xl font-bold text-on-surface uppercase"
         >
-          I AM READY TO CONSULT YOU
+          Let’s Work Together
+          
         </motion.h2>
+        <motion.p
+  initial={{ opacity: 0, y: 15 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{ delay: 0.2 }}
+  className="text-outline max-w-xl text-center"
+>
+  I’m available for freelance work and open to new opportunities. 
+  Let’s build something amazing together.
+</motion.p>
         <form className="w-full max-w-4xl grid grid-cols-1 md:grid-cols-4 gap-4 items-end">
           <div className="space-y-2 text-left">
-            <label className="text-[10px] uppercase tracking-widest text-outline ml-2">My Name Is</label>
+            <label className="text-[10px] uppercase tracking-widest text-outline ml-2">Your name</label>
             <motion.input
               variants={inputVariants}
               whileFocus="focus"
@@ -36,7 +47,7 @@ const Contact = () => {
             />
           </div>
           <div className="space-y-2 text-left">
-            <label className="text-[10px] uppercase tracking-widest text-outline ml-2">I Am Interested In</label>
+            <label className="text-[10px] uppercase tracking-widest text-outline ml-2">Project type </label>
             <motion.input
               variants={inputVariants}
               whileFocus="focus"
@@ -61,7 +72,7 @@ const Contact = () => {
             className="tag-pill py-3.5 rounded-xl text-white font-bold tracking-widest text-sm hover:brightness-110 transition-all" 
             type="submit"
           >
-            SEND
+           LET'S TALK
           </motion.button>
         </form>
         <div className="flex flex-col md:flex-row gap-8 md:gap-16 pt-8 text-outline text-base border-t border-white/5 w-full justify-center">
