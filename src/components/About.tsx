@@ -71,17 +71,12 @@ const About = () => {
             <span className="text-primary uppercase tracking-[0.2em] text-xs font-bold">My Bio</span>
             <h2 className="text-3xl md:text-4xl font-bold text-on-surface">About <span className="gradient-text">me.</span></h2>
           </div>
-          <div className="space-y-4 text-outline-variant leading-relaxed text-base md:text-lg">
+          <div className="space-y-4 text-outline-variant leading-relaxed text-white/50 md:text-lg">
         
             <p>
-            Hi, I’m Tawsif, a Frontend Developer who loves building modern and interactive web applications.
+           I’m a passionate Frontend Developer focused on building modern, responsive, and interactive web experiences using React, Next.js, and Tailwind CSS.
 
-I work mainly with React, Next.js, and Tailwind CSS, and I enjoy adding smooth animations using GSAP and Framer Motion to make websites more engaging.
-
-I focus on creating clean, responsive, and user-friendly interfaces. I like turning ideas into real projects that solve problems and look great.
-
-Currently, I’m improving my full-stack development skills and looking for opportunities to work on real-world projects and grow as a developer.
-
+Currently pursuing a B.Sc (Honours) in Mathematics, I enjoy combining analytical thinking with creative UI development to build clean and user-friendly applications.
 
             </p>
             <ul>
