@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="space-y-6">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
-              <span className="text-on-primary font-bold text-xl">M</span>
+              <span className="text-on-primary font-bold text-xl">T</span>
             </div>
             <span className="text-2xl font-bold text-white tracking-tighter">HB<span className="text-primary">G</span></span>
           </div>
@@ -50,7 +50,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="max-w-7xl mx-auto px-8 mt-16 pt-8 border-t border-white/5 text-center text-outline text-[10px] uppercase tracking-widest">
-        <p>© 2023 Meriem Portfolio. All rights reserved.</p>
+        <p>© 2026 Tawsif Portfolio. All rights reserved.</p>
       </div>
     </footer>
   );

@@ -10,7 +10,7 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Meriem - Full Stack Developer Portfolio",
+  title: "Tawsif - Full Stack Developer Portfolio",
   description: "Crafting modern, responsive, and user-friendly websites with passion and precision.",
 };
 

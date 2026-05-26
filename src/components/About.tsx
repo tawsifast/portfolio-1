@@ -87,12 +87,17 @@ Currently pursuing a B.Sc (Honours) in Mathematics, I enjoy combining analytical
             </ul>
           
           </div>
-          <button className="electric-blue-btn px-8 py-3 rounded-xl flex items-center space-x-2 font-semibold mt-4 active:scale-95">
+          <a 
+            href="https://drive.google.com/file/d/1mQVJmUmmgOq9rjJcb6HubDy3lnlDO2Yd/view?usp=drive_link"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="electric-blue-btn px-8 py-3 rounded-xl inline-flex items-center space-x-2 font-semibold mt-4 active:scale-95"
+          >
             <span>View Resume</span>
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"></path>
             </svg>
-          </button>
+          </a>
         </div>
       </div>
     </section>

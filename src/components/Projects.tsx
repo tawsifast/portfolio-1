@@ -69,9 +69,10 @@ const Projects = () => {
       title: "Corporate Website",
       desc: "Corporate website for an Alperton agri-level distributor, focused on establishing through clear structure, strong visuals, and intuitive navigation.",
       img: "https://lh3.googleusercontent.com/aida-public/AB6AXuAozGEExXhKvtna6ULS4rH58JPyIgTv17h1PZnV8ypB7XHe9SOhuUKkyZSKPmuQtyYCRLlIuIFUyKMOYizSKeZUi3KKjeNUlb9NGgHB4g0WbbvT2x54C1gXJaxlXa8Elsnp4Eo0EXEKwB8YyqAzqz8ZVF5q8bSbDG4j7DiJtWgsSIiC3Ye1e3OFMZWU1PCiJIGb4sTU6sOhcdyFn4MP3ZiSCBMJ34M5Yu5uvYtPQBWEMfxM8A1qJbOiQwvQnW9T7e9EQa5knW7zVn3S",
-      repo: "#",
-      demo: "#"
+      repo: "github.com/tawsifast/Assignment-9-client",
+      demo: "https://assignment-9-client-zeta.vercel.app"
     }
+
   ];
 
   return (
@@ -86,7 +87,7 @@ const Projects = () => {
       </div>
       <div ref={gridRef} className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {projects.map((project, i) => (
-          <motion.div 
+          <motion.div
             key={i}
             custom={i}
             variants={cardVariants}
@@ -108,8 +109,8 @@ const Projects = () => {
                 {project.desc}
               </p>
               <div className="flex items-center gap-4 pt-4">
-                <a 
-                  className="text-white hover:text-primary flex items-center gap-2 text-sm" 
+                <a
+                  className="text-white hover:text-primary flex items-center gap-2 text-sm"
                   href={project.repo}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -121,8 +122,8 @@ const Projects = () => {
                   </span>
                   Repository
                 </a>
-                <a 
-                  className="tag-pill px-4 py-1.5 rounded-full text-white text-xs flex items-center gap-2" 
+                <a
+                  className="tag-pill px-4 py-1.5 rounded-full text-white text-xs flex items-center gap-2"
                   href={project.demo}
                   target="_blank"
                   rel="noopener noreferrer"

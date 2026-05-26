@@ -71,12 +71,17 @@ const Hero = () => {
             I build modern, responsive, and interactive web applications using React and Next.js. I focus on clean UI, smooth animations, and great user experience.
           </motion.p>
           <motion.div variants={itemVariants} className="flex flex-col sm:flex-row items-start sm:items-center gap-6">
-            <button className="electric-blue-btn px-8 py-3 rounded-xl flex items-center space-x-2 font-semibold active:scale-95">
+            <a 
+              href="https://drive.google.com/file/d/1mQVJmUmmgOq9rjJcb6HubDy3lnlDO2Yd/view?usp=drive_link"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="electric-blue-btn px-8 py-3 rounded-xl flex items-center space-x-2 font-semibold active:scale-95"
+            >
               <span>Download Resume</span>
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path d="M4 16v1a2 2 0 002 2h12a2 2 0 002-2v-1m-4-4l-4 4m0 0l-4-4m4 4V4" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"></path>
               </svg>
-            </button>
+            </a>
             <div className="flex items-center space-x-4 text-outline-variant">
               <a 
                 className="hover:text-primary transition-all hover:scale-110 active:scale-95" 
