@@ -67,9 +67,9 @@ const Projects = () => {
     },
     {
       title: "Corporate Website",
-      desc: "Corporate website for an Alperton agri-level distributor, focused on establishing through clear structure, strong visuals, and intuitive navigation.",
+      desc: "Discover your ideal vehicle through intelligent search and dynamic filtering, execute hassle-free bookings, and experience premium rental excellence nationwide.",
       img: "https://lh3.googleusercontent.com/aida-public/AB6AXuAozGEExXhKvtna6ULS4rH58JPyIgTv17h1PZnV8ypB7XHe9SOhuUKkyZSKPmuQtyYCRLlIuIFUyKMOYizSKeZUi3KKjeNUlb9NGgHB4g0WbbvT2x54C1gXJaxlXa8Elsnp4Eo0EXEKwB8YyqAzqz8ZVF5q8bSbDG4j7DiJtWgsSIiC3Ye1e3OFMZWU1PCiJIGb4sTU6sOhcdyFn4MP3ZiSCBMJ34M5Yu5uvYtPQBWEMfxM8A1qJbOiQwvQnW9T7e9EQa5knW7zVn3S",
-      repo: "github.com/tawsifast/Assignment-9-client",
+      repo: "https://github.com/tawsifast/Assignment-9-client",
       demo: "https://assignment-9-client-zeta.vercel.app"
     }
 
