@@ -52,26 +52,26 @@ const Projects = () => {
 
   const projects = [
     {
-      title: "Ecommerce Platform",
-      desc: "A clean, focused checkout UI for an ecommerce platform. Designed to reduce friction and maximize conversions through clear layout, validation, and trust building elements.",
-      img: "https://lh3.googleusercontent.com/aida-public/AB6AXuA0F8lc7ivQP-1tJi4pVnKKkuBC0RQUDd_7SGHDkFvy8vjutVSrpFH5Hy-pWWQQFX16OyK9cKejsQH99l_1SRtQtluh3N7tPyoAJ4oSpsH-RuGlX990cVF5if6-f4WM4mJhldlhaR9MsarinvawQ7vv2Souph8_m4TYsjsXTKYs6vvJBSeiIRafItQ7yu1bAugqc40Grn7OVruy-viBqX-AetzzPKGgGIrLFkzyWJEd95UKEpblx8jnjbfo4UL5nVjGwtJSlTAzAW6-",
-      repo: "https://github.com/tawsifast/Assignment-8",
-      demo: "https://assignment-8-mu-rust.vercel.app/"
-    },
-    {
-      title: "Clinic Management",
-      desc: "Clinic management dashboard built for clarity and efficiency. Prioritizes quick access to patient data, appointment stats, and admin tools with a clear layout and visual hierarchy.",
-      img: "https://lh3.googleusercontent.com/aida-public/AB6AXuDKOpS7SnU8cKdrhnf3OpKmfCFjW-4TjO7KyyMBr0sVmA0GzinLBuP0Q-ZgBvXB3yhcUhkWOeA0v_OhXkHq6JW4wMMMRxZ8wP3hSq1HS-RFmExvwLUZhg8yvHbOdupamQ2gImL6PIWKdYPlo2elOOUTLrMlJNRTUZ3LpENqUjWAqJIOQSDZSMwEop56Hf_E6PLsVsvJuLfma2h-YltAzqvj4J8qhxB-BkA4RgVltOiRc5xywRcXS-E_ao83WcOmqiUr3BmLTg2LUDj7",
-      repo: "https://github.com/tawsifast/pisgen-server",
-      demo: "https://pisgen-server.vercel.app/"
-    },
-    {
       title: "DriveFleet - Central car rental",
       desc: "Discover your ideal vehicle through intelligent search and dynamic filtering, execute hassle-free bookings, and experience premium rental excellence nationwide.",
       img: "/carImage.png",
-      repo: "https://github.com/tawsifast/Assignment-9-client",
-      demo: "https://assignment-9-client-zeta.vercel.app"
-    }
+      repo: "https://github.com/tawsifast/Drive-Fleet",
+      demo: "https://drive-fleet-zeta.vercel.app"
+    },
+    {
+      title: "Ecommerce Platform",
+      desc: "A clean, focused checkout UI for an ecommerce platform. Designed to reduce friction and maximize conversions through clear layout, validation, and trust building elements.",
+      img: "https://media.istockphoto.com/id/2237056850/photo/distributor-online-shopping-management-frontend-and-backend-developer-customer-relationship.jpg?s=1024x1024&w=is&k=20&c=pVcM2thdLrHzwpTMXYClL2zLa2Nov5DcE3W6zm6cMx0=",
+      repo: "https://github.com/tawsifast/Shope-Zone",
+      demo: "https://shopzone-mu-rust.vercel.app"
+    },
+    {
+      title: "News Platfrom",
+      desc: "Clinic management dashboard built for clarity and efficiency. Prioritizes quick access to patient data, appointment stats, and admin tools with a clear layout and visual hierarchy.",
+      img: "https://media.istockphoto.com/id/1056306726/photo/3d-rendering-of-collection-of-several-pieces-of-vintage-equipment-a-tv-a-radio-set-a.jpg?s=612x612&w=0&k=20&c=ePvFpf94XK4-6TwqjeXaM3_oa8ve8OsWVDoU11MQHZg=",
+      repo: "https://github.com/tawsifast/dragon-news-next",
+      demo: "https://dragon-news-next-gamma.vercel.app"
+    },
 
   ];
 

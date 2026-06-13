@@ -50,7 +50,7 @@ const About = () => {
             <img
               alt="Developer Bio Image"
               className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUWXoHzykHTTooJ51bH21ItbGZrvUzysCIulZxCQhYujqV4CO2vj2clx4DCnRN5Gr_vCDx7gZGSSZaefyhyZSey32OCO1vHI7lm-zWMS94CfB0feLnMJUAqHhL3RU9xNbRDd6gc5V7mpDXSOhJzsJ0jQBSPzOhxHeCKDVjzKFN8zpenEMxiyaRmMUCr243V1aRK7SCj2hQ8-6jDjBZkG28GUnWJzOQW8hXzxlsSGXiaz6u51Llkpxab17eW9xllXGCfkatkJulBpJW"
+              src="/ghibliImage.png"
             />
           </div>
           {/* Tech Icon Tray */}
@@ -60,7 +60,7 @@ const About = () => {
             <img
               alt="React"
               className="w-6 h-6 opacity-80"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAv99JRzqE-0YJXdFyy-nOapezSpkKgtYIW7bM-frGPog5F481slrAn1swIJN4NbSbV-G0g1jKhZBdg30ixQgdGRXXoxBpkcbSQzY6YoS7t9uGB2UnSojED_mZDbpFv4KHbT7dXxowMoD0gJDvldGKQvnBo2XHKChsatGi7jPoDi33zh2r41F6p-cHl145U0BlNjQWJ7b1iO1ITPQqXpmxww8VhRCjQBZr39odOuo98nmmQ85W0KhhE2K666R2p0n9AfNOA7m_vze3E"
+              src="/ghibliImage.png"
             />
             <span className="text-primary font-bold text-sm bg-primary/10 px-2 py-1 rounded">CSS3</span>
           </div>
@@ -72,22 +72,22 @@ const About = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-on-surface">About <span className="gradient-text">me.</span></h2>
           </div>
           <div className="space-y-4 text-outline-variant leading-relaxed text-white/50 md:text-lg">
-        
-            <p>
-           I’m a passionate Frontend Developer focused on building modern, responsive, and interactive web experiences using React, Next.js, and Tailwind CSS.
 
-Currently pursuing a B.Sc (Honours) in Mathematics, I enjoy combining analytical thinking with creative UI development to build clean and user-friendly applications.
+            <p>
+              I’m a passionate Frontend Developer focused on building modern, responsive, and interactive web experiences using React, Next.js, and Tailwind CSS.
+
+              Currently pursuing a B.Sc (Honours) in Mathematics, I enjoy combining analytical thinking with creative UI development to build clean and user-friendly applications.
 
             </p>
             <ul>
-                <li>✔ Frontend Developer (React / Next.js)</li>
-                <li>✔ Focused on UI/UX & Animations</li>
-                <li>✔ Learning Full Stack Development</li>
-                <li>✔ Open for freelance & internships</li>
+              <li>✔ Frontend Developer (React / Next.js)</li>
+              <li>✔ Focused on UI/UX & Animations</li>
+              <li>✔ Learning Full Stack Development</li>
+              <li>✔ Open for freelance & internships</li>
             </ul>
-          
+
           </div>
-          <a 
+          <a
             href="https://drive.google.com/file/d/1vjXbw-T2JGzIG8viaWRSBqEAStA71HSM/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
