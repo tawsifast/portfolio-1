@@ -72,7 +72,7 @@ const Hero = () => {
           </motion.p>
           <motion.div variants={itemVariants} className="flex flex-col sm:flex-row items-start sm:items-center gap-6">
             <a 
-              href="https://drive.google.com/file/d/1mQVJmUmmgOq9rjJcb6HubDy3lnlDO2Yd/view?usp=drive_link"
+              href="https://drive.google.com/file/d/1vjXbw-T2JGzIG8viaWRSBqEAStA71HSM/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="electric-blue-btn px-8 py-3 rounded-xl flex items-center space-x-2 font-semibold active:scale-95"

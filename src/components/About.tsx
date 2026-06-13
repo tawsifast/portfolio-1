@@ -88,7 +88,7 @@ Currently pursuing a B.Sc (Honours) in Mathematics, I enjoy combining analytical
           
           </div>
           <a 
-            href="https://drive.google.com/file/d/1mQVJmUmmgOq9rjJcb6HubDy3lnlDO2Yd/view?usp=drive_link"
+            href="https://drive.google.com/file/d/1vjXbw-T2JGzIG8viaWRSBqEAStA71HSM/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className="electric-blue-btn px-8 py-3 rounded-xl inline-flex items-center space-x-2 font-semibold mt-4 active:scale-95"
