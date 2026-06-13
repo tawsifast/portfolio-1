@@ -2,8 +2,9 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="bg-surface-container-lowest py-20 border-t border-white/5">
-      <div className="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-4 gap-12">
+    <footer className="px-8 md:px-20 max-w-7xl mx-auto mb-10">
+      <div className="glass-card rounded-[2rem] p-10 md:p-16">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
         <div className="space-y-6">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
@@ -19,7 +20,7 @@ const Footer = () => {
             <p className="flex gap-3"><span>📞</span> +88 01403794140</p>
             <p className="flex gap-3"><span>📧</span> 0070tawsif@gmail.com</p>
             <p className="flex gap-3"><span>📍</span> Ctg college, chawkbazar, Chattagram, Bangladesh </p>
-            <button className="bg-orange-600 text-white px-6 py-2 rounded-lg font-bold flex items-center gap-2 hover:bg-orange-700 transition-colors">
+            <button className="electric-blue-btn px-8 py-3 rounded-xl inline-flex items-center space-x-2 font-semibold mt-4 active:scale-95">
               <span>📩</span> SEND A MESSAGE
             </button>
           </div>
@@ -48,9 +49,10 @@ const Footer = () => {
             <span className="px-3 py-1 border border-white/10 rounded-md text-outline text-xs cursor-default hover:border-primary/50 hover:text-primary transition-all">Industry</span>
           </div>
         </div>
-      </div>
-      <div className="max-w-7xl mx-auto px-8 mt-16 pt-8 border-t border-white/5 text-center text-outline text-[10px] uppercase tracking-widest">
-        <p>© 2026 Tawsif Portfolio. All rights reserved.</p>
+        </div>
+        <div className="mt-16 pt-8 border-t border-white/10 text-center text-outline text-[10px] uppercase tracking-widest">
+          <p>© 2026 Tawsif Portfolio. All rights reserved.</p>
+        </div>
       </div>
     </footer>
   );

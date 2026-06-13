@@ -37,7 +37,7 @@ const Navbar = () => {
           <img
             alt="Tawsif Profile"
             className="w-full h-full object-cover"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuB88b2R1SIL4g826wTBY4QTYgRYkwJ1XHHfCdqY_DaBANtfg8CgrsfdoYlP5jusXnLMfo-rlJI-jgRoy8eKAHEWsUxwKRpGL2qBaBJ3x42x50HWg20nNC7Wjo8lab7BefcaSsp6qKnSQG4gRiWuBMdATe2PqwfJllUUAcueTKYXYiTmejndoWrkDvbWvjoiKruLfaGcFVOoythHj49q1txW8uCDN0dibrvHTmPEEshzaEX3ACYSpl6uAx4hMH2YTpg8-xYrDrAWMq4d"
+            src="/userImage.png"
           />
         </div>
       </div>
