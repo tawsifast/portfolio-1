@@ -130,9 +130,9 @@ const Hero = () => {
             transition={{ delay: 1, duration: 0.5 }}
             className="glass-tray rounded-2xl px-6 py-3 flex items-center gap-6"
           >
-            <img alt="Node" className="w-8 h-8 opacity-80 hover:scale-110 transition-transform" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJAYvo3arZb0LxyGFeJsnApUwx-X9QLlVjfP58M_h6Nu8GyskgSUnHIbUQiR28J49mNgWUWwDVDQBER0Biadk_7Tq-FLeiTgltop_9F4NCtLaah2tQps_nmGChy9qVJtjjDsg6h6TxfwMxwrs6JOCE8iHZTtz9lb0VPYGAJInlATaNUOzBVDw7StIXUmxQCpk5Ghw-JrhninFXTDqY_9SX9wlxOG0GZykYQp6lgqEkTYrSBTojFMUZe0E4GIsKskXBZjoZqoa2VCUJ" />
-            <img alt="HTML5" className="w-8 h-8 opacity-80 hover:scale-110 transition-transform" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB215YwfriP5BmZeH7pDAoYYrCoQbvsXRa-dHFvFq6oLmP99pCH-R3RmZaV1gtxQzppa1OYywDKAaNPtL6j2w-nzj8Y69OVz1I3QY36uColdrReawSQTDeT-wP6iIqUlbdMO2rlo9wYM_vrbhyTyLmlKyoRCdpHX2o5_Gxh7BV95do6PJk52jiGUKTuskiW1_R7hnDQI-iZQH3nLyXmvN2w_OZfUQcB8GfTJopj_iSKwHMExWyt14QayUChqIc_ksIb9Pc3uXkyobEp" />
-            <img alt="React" className="w-8 h-8 opacity-80 hover:scale-110 transition-transform" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjbVWTMEZXVb-jqHawS2f-zRCVlJttOBS0wJq2sWi7pyocsXCADKVnJEMxwP2I7s3bfxkr68tdlCWyyCUBsnudoVes00EX29gnIG-SgqTypiWpIDtaTyYXJ0hK13U3kUEBCDBeqzM7sL3vGQNc1IgdfyMOdIY5lE285txDVZJaCJ6nvxe_RoLNNNTuy-QAEbiK649eiFn5LC4ofHO0HFc6HcXGTCyuSAKATpGxt5vKiatDDAcU2QOjuqfc1y1QVoX4SvuniboBy92l" />
+            <img alt="Node" className="w-8 h-8 opacity-60 brightness-75 hover:scale-110 transition-all hover:opacity-100 hover:brightness-100" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" />
+            <img alt="HTML5" className="w-8 h-8 opacity-60 brightness-75 hover:scale-110 transition-all hover:opacity-100 hover:brightness-100" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" />
+            <img alt="React" className="w-8 h-8 opacity-60 brightness-75 hover:scale-110 transition-all hover:opacity-100 hover:brightness-100" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" />
           </motion.div>
         </div>
       </div>
