@@ -50,9 +50,9 @@ export const projects: Project[] = [
     image: "/propertyRental.png",
     shortDescription: "Property Rental & Booking Platform featuring real-time workflows.",
     description: "NexusHome a property rental marketplace enabling property owners to list rentals and tenants to discover, book, and pay reservation fees online — featuring role-based dashboards, real-time booking workflows, and Stripe-powered secure payments.",
-    technologies: ["Next.js", "JavaScript", "Tailwind CSS", "Stripe", "Prisma", "PostgreSQL"],
+    technologies: ["Next.js", "JavaScript", "Tailwind CSS", "Stripe", "MongoDB", "Express", "Node.js"],
     liveLink: "https://nexushome-phi.vercel.app",
-    githubClient: "https://github.com/tawsifast/Assignment-10",
+    githubClient: "https://github.com/tawsifast/Nexus-Home",
     challenges: [
       "Integrating Stripe for secure and seamless payment processing.",
       "Designing complex database schemas for property listings and bookings.",
