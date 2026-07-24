@@ -72,7 +72,7 @@ const Hero = () => {
           </motion.p>
           <motion.div variants={itemVariants} className="flex flex-col sm:flex-row items-start sm:items-center gap-6">
             <a 
-              href="https://drive.google.com/file/d/1vjXbw-T2JGzIG8viaWRSBqEAStA71HSM/view?usp=sharing"
+              href="https://drive.google.com/file/d/17I1BjNsV_zv22glnUboTMWqOCZ3Tnwtl/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="electric-blue-btn px-8 py-3 rounded-xl flex items-center space-x-2 font-semibold active:scale-95"
@@ -130,9 +130,9 @@ const Hero = () => {
             transition={{ delay: 1, duration: 0.5 }}
             className="glass-tray rounded-2xl px-6 py-3 flex items-center gap-6"
           >
-            <img alt="Node" className="w-8 h-8 opacity-60 brightness-75 hover:scale-110 transition-all hover:opacity-100 hover:brightness-100" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" />
-            <img alt="HTML5" className="w-8 h-8 opacity-60 brightness-75 hover:scale-110 transition-all hover:opacity-100 hover:brightness-100" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" />
             <img alt="React" className="w-8 h-8 opacity-60 brightness-75 hover:scale-110 transition-all hover:opacity-100 hover:brightness-100" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" />
+            <img alt="Node.js" className="w-8 h-8 opacity-60 brightness-75 hover:scale-110 transition-all hover:opacity-100 hover:brightness-100" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" />
+            <img alt="TypeScript" className="w-8 h-8 opacity-60 brightness-75 hover:scale-110 transition-all hover:opacity-100 hover:brightness-100" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" />
           </motion.div>
         </div>
       </div>
