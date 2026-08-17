@@ -17,7 +17,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
           alt={project.title}
           src={project.image}
           fill
-          className="object-cover"
+          className="object-cover group-hover:scale-105 transition-transform duration-500"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
       </div>
@@ -38,9 +38,9 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
             asChild
             className="tag-pill px-6 py-2 rounded-full text-white text-sm font-medium hover:brightness-110 hover:shadow-[0_0_15px_rgba(255,255,255,0.4)] transition-all duration-300 flex items-center gap-2 h-auto"
           >
-            <Link href={`/projects/${project.slug}`}>
+            <Link href={`/projects/${project.slug}`} className="flex items-center gap-2">
               View Details
-              <ArrowRightIcon className="w-4 h-4" />
+              <ArrowRightIcon className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
             </Link>
           </Button>
         </div>

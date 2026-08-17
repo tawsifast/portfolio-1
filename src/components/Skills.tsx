@@ -7,6 +7,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Card } from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
+import { EASE_ENTRANCE, prefersReducedMotion } from '@/lib/motion';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -31,6 +32,11 @@ const SkillBar = ({ level }: { level: string }) => {
   const target = parseFloat(level);
 
   useEffect(() => {
+    if (prefersReducedMotion()) {
+      const id = requestAnimationFrame(() => setValue(target));
+      return () => cancelAnimationFrame(id);
+    }
+
     const proxy = { v: 0 };
     const tween = gsap.to(proxy, {
       v: target,
@@ -66,8 +72,8 @@ const Skills = () => {
       y: 0,
       transition: {
         delay: i * 0.1,
-        duration: 0.5,
-        ease: "easeOut",
+        duration: 0.6,
+        ease: EASE_ENTRANCE,
       },
     }),
     hover: {

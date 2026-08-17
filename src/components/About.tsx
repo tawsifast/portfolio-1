@@ -5,6 +5,7 @@ import Image from 'next/image';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { CheckIcon, FileTextIcon } from '@/components/colorful-icons';
+import { prefersReducedMotion } from '@/lib/motion';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -17,16 +18,18 @@ const About = () => {
   const rightRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    if (prefersReducedMotion()) return;
+
     const ctx = gsap.context(() => {
       gsap.from(leftRef.current, {
         x: -100,
         opacity: 0,
         duration: 1.2,
-        ease: "power3.out",
+        ease: "expo.out",
         scrollTrigger: {
           trigger: sectionRef.current,
           start: "top 75%",
-          toggleActions: "play none none reverse",
+          toggleActions: "play none none none",
         }
       });
 
@@ -34,11 +37,11 @@ const About = () => {
         x: 100,
         opacity: 0,
         duration: 1.2,
-        ease: "power3.out",
+        ease: "expo.out",
         scrollTrigger: {
           trigger: sectionRef.current,
           start: "top 75%",
-          toggleActions: "play none none reverse",
+          toggleActions: "play none none none",
         }
       });
     }, sectionRef);
@@ -82,23 +85,40 @@ const About = () => {
           </div>
           <div className="space-y-4 text-outline-variant leading-relaxed text-white/50 md:text-lg">
 
-            <p>
-              I’m a passionate Frontend Developer focused on building modern, responsive, and interactive web experiences using React, Next.js, and Tailwind CSS.
+           <p>
+  I'm a MERN Stack Developer with experience building modern web applications using React, Next.js, TypeScript, Node.js, Express.js, and MongoDB.
 
-              Currently pursuing a B.Sc (Honours) in Mathematics, I enjoy combining analytical thinking with creative UI development to build clean and user-friendly applications.
+Through real-world projects, I've developed skills in responsive UI development, REST API integration, authentication, and scalable application architecture.
 
-            </p>
-            <ul>
-              <li className="flex items-center gap-2"><CheckIcon className="w-4 h-4" /> Frontend Developer (React / Next.js)</li>
-              <li className="flex items-center gap-2"><CheckIcon className="w-4 h-4" /> Focused on UI/UX & Animations</li>
-              <li className="flex items-center gap-2"><CheckIcon className="w-4 h-4" /> Learning Full Stack Development</li>
-              <li className="flex items-center gap-2"><CheckIcon className="w-4 h-4" /> Open for freelance & internships</li>
-            </ul>
+I enjoy solving problems, learning new technologies, and building applications that prioritize performance, usability, and clean code.
+</p>
+
+<ul>
+  <li className="flex items-center gap-2">
+    <CheckIcon className="w-4 h-4" />
+    MERN Stack Developer
+  </li>
+
+  <li className="flex items-center gap-2">
+    <CheckIcon className="w-4 h-4" />
+    Responsive & User-Centered Development
+  </li>
+
+  <li className="flex items-center gap-2">
+    <CheckIcon className="w-4 h-4" />
+    REST API & Authentication Integration
+  </li>
+
+  <li className="flex items-center gap-2">
+    <CheckIcon className="w-4 h-4" />
+    Clean, Scalable & Maintainable Code
+  </li>
+</ul>
 
           </div>
           <Button
             asChild
-            className="electric-blue-btn px-8 py-3 rounded-xl inline-flex items-center space-x-2 font-semibold mt-4 active:scale-95 h-auto"
+            className="electric-blue-btn px-8 py-3 rounded-xl inline-flex items-center space-x-2 font-semibold mt-4 active:scale-[0.98] h-auto"
           >
             <a
               href="https://drive.google.com/file/d/17I1BjNsV_zv22glnUboTMWqOCZ3Tnwtl/view?usp=sharing"

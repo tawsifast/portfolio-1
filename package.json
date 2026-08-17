@@ -11,6 +11,8 @@
   "dependencies": {
     "@ai-sdk/google": "^4.0.44",
     "@ai-sdk/react": "^4.0.69",
+    "@tsparticles/react": "^4.3.2",
+    "@tsparticles/slim": "^4.3.2",
     "@types/gsap": "^1.20.2",
     "ai": "^7.0.66",
     "class-variance-authority": "^0.7.1",

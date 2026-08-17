@@ -10,6 +10,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { Separator } from '@/components/ui/separator';
+import { EASE_ENTRANCE } from '@/lib/motion';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -58,7 +59,7 @@ const Contact = () => {
       <Card className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-[2rem] p-6 md:p-8 flex flex-col items-center text-center space-y-6 shadow-none">
         <motion.h2 
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0, transition: { duration: 0.6, ease: EASE_ENTRANCE } }}
           viewport={{ once: true }}
           className="text-2xl md:text-3xl font-bold text-on-surface uppercase"
         >
@@ -67,9 +68,8 @@ const Contact = () => {
         </motion.h2>
         <motion.p
           initial={{ opacity: 0, y: 15 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0, transition: { delay: 0.2, duration: 0.6, ease: EASE_ENTRANCE } }}
           viewport={{ once: true }}
-          transition={{ delay: 0.2 }}
           className="text-outline max-w-xl text-center"
         >
           I’m available for freelance work and open to new opportunities. 

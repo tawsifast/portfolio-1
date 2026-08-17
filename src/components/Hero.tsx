@@ -6,9 +6,10 @@ import Image from 'next/image';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { DownloadIcon } from '@/components/colorful-icons';
+import { EASE_ENTRANCE, prefersReducedMotion } from '@/lib/motion';
 import { GithubIcon, LinkedinIcon } from '@/components/social-icons';
 import { Button } from '@/components/ui/button';
-import { Card } from '@/components/ui/card';
+import GlowCard from '@/components/ui/GlowCard';
 import {
   Tooltip,
   TooltipContent,
@@ -23,6 +24,8 @@ const Hero = () => {
   const imgContainerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    if (prefersReducedMotion()) return;
+
     const ctx = gsap.context(() => {
       gsap.to(imgContainerRef.current, {
         y: -100,
@@ -57,14 +60,14 @@ const Hero = () => {
       y: 0,
       transition: {
         duration: 0.8,
-        ease: "easeOut",
+        ease: EASE_ENTRANCE,
       },
     },
   };
 
   return (
     <section ref={containerRef} className="px-8 md:px-20 max-w-7xl mx-auto" id="hero">
-      <Card className="glass-card rounded-[2rem] p-10 md:p-16 grid grid-cols-1 md:grid-cols-2 items-center gap-12 relative overflow-hidden border-0 shadow-none bg-transparent">
+      <GlowCard className="glass-card rounded-[2rem] p-10 md:p-16 grid grid-cols-1 md:grid-cols-2 items-center gap-12 relative overflow-hidden border-0 shadow-none bg-transparent">
         <motion.div 
           className="z-10"
           variants={containerVariants}
@@ -78,12 +81,12 @@ const Hero = () => {
             MERN Stack Developer
           </motion.h2>
           <motion.p variants={itemVariants} className="text-outline text-lg max-w-md mb-10">
-            I build modern, responsive, and interactive web applications using React and Next.js. I focus on clean UI, smooth animations, and great user experience.
+            Building scalable web applications with a focus on performance, maintainability, and seamless user experiences. Turning complex requirements into reliable digital products through modern technologies and thoughtful engineering.
           </motion.p>
           <motion.div variants={itemVariants} className="flex flex-col sm:flex-row items-start sm:items-center gap-6">
             <Button
               asChild
-              className="electric-blue-btn px-8 py-3 rounded-xl flex items-center gap-2 font-semibold active:scale-95 h-auto"
+              className="electric-blue-btn px-8 py-3 rounded-xl flex items-center gap-2 font-semibold active:scale-[0.98] h-auto"
             >
               <a
                 href="https://drive.google.com/file/d/17I1BjNsV_zv22glnUboTMWqOCZ3Tnwtl/view?usp=sharing"
@@ -157,7 +160,7 @@ const Hero = () => {
             <Image width={32} height={32} alt="TypeScript" className="w-8 h-8 opacity-60 brightness-75 hover:scale-110 transition-all hover:opacity-100 hover:brightness-100" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" />
           </motion.div>
         </div>
-      </Card>
+      </GlowCard>
     </section>
   );
 };

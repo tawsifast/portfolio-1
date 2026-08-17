@@ -8,6 +8,7 @@ import { projects } from "../data/projects";
 import ProjectCard from "./ProjectCard";
 import { Card } from "./ui/card";
 import { Tabs, TabsList, TabsTrigger } from "./ui/tabs";
+import { EASE_ENTRANCE, prefersReducedMotion } from "@/lib/motion";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -19,6 +20,8 @@ const Projects = () => {
   const [category, setCategory] = useState<ProjectCategory>("all");
 
   useEffect(() => {
+    if (prefersReducedMotion()) return;
+
     const ctx = gsap.context(() => {
       // Orbital glow parallax
       gsap.to(".orbital-glow", {
@@ -44,7 +47,7 @@ const Projects = () => {
       transition: {
         delay: i * 0.15,
         duration: 0.6,
-        ease: "easeOut",
+        ease: EASE_ENTRANCE,
       },
     }),
     hover: {
@@ -93,7 +96,7 @@ const Projects = () => {
             whileHover="hover"
             className="h-full"
           >
-            <Card className="project-card rounded-2xl p-6 shrink-0 flex flex-col h-full border-0 shadow-none bg-transparent">
+            <Card className="project-card rounded-2xl p-6 shrink-0 flex flex-col h-full border-0 shadow-none bg-transparent group">
               <ProjectCard project={project} />
             </Card>
           </motion.div>

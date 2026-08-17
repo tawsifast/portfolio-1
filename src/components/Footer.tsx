@@ -45,10 +45,10 @@ const Footer = () => {
             <div className="space-y-4 text-outline text-base">
               <p className="flex gap-3 items-center"><PhoneIcon className="w-4 h-4" /> +88 01403794140</p>
               <p className="flex gap-3 items-center"><MailIcon className="w-4 h-4" /> tawsifislam0070@gmail.com</p>
-              <p className="flex gap-3 items-center"><MapPinIcon className="w-4 h-4" /> Ctg college, chawkbazar, Chattagram, Bangladesh</p>
+              <p className="flex gap-3 items-center"><MapPinIcon className="w-4 h-4" />  Chattagram, Bangladesh</p>
               <Button
                 asChild
-                className="electric-blue-btn px-8 py-3 rounded-xl inline-flex items-center space-x-2 font-semibold mt-4 active:scale-95 h-auto"
+                className="electric-blue-btn px-8 py-3 rounded-xl inline-flex items-center space-x-2 font-semibold mt-4 active:scale-[0.98] h-auto"
               >
                 <Link href="/#contact">
                   <SendIcon className="w-4 h-4" />

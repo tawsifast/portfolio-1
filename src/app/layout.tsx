@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Space_Grotesk } from "next/font/google";
+import { MotionConfig } from "framer-motion";
 import "./globals.css";
 import SmoothScroll from "@/components/SmoothScroll";
 import MouseFollower from "@/components/MouseFollower";
@@ -23,11 +24,13 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${spaceGrotesk.variable}`}>
       <body className="antialiased">
-        <SmoothScroll>
-          <MouseFollower />
-          {children}
-          <ChatBot />
-        </SmoothScroll>
+        <MotionConfig reducedMotion="user">
+          <SmoothScroll>
+            <MouseFollower />
+            {children}
+            <ChatBot />
+          </SmoothScroll>
+        </MotionConfig>
         <Toaster theme="dark" position="bottom-right" richColors />
       </body>
     </html>

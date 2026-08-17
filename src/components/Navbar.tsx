@@ -15,6 +15,7 @@ import {
   SheetClose,
 } from '@/components/ui/sheet';
 import { Separator } from '@/components/ui/separator';
+import { prefersReducedMotion } from '@/lib/motion';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -33,6 +34,8 @@ const Navbar = () => {
   useEffect(() => {
     const header = headerRef.current;
     if (!header) return;
+
+    if (prefersReducedMotion()) return;
 
     const showAnim = gsap.from(header, {
       yPercent: -100,
@@ -84,7 +87,7 @@ const Navbar = () => {
         <div className="flex items-center gap-4">
           <Button
             asChild
-            className="hidden md:inline-flex bg-secondary-container text-secondary-fixed font-bold px-6 rounded-full hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-all border border-secondary-fixed/20 active:scale-95 text-sm"
+            className="hidden md:inline-flex bg-secondary-container text-secondary-fixed font-bold px-6 rounded-full hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-all border border-secondary-fixed/20 active:scale-[0.98] text-sm"
           >
             <Link href="/#contact">Hire me</Link>
           </Button>
