@@ -1,8 +1,13 @@
 'use client';
 
 import React, { useEffect, useRef } from 'react';
+import Image from 'next/image';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { CheckIcon, FileTextIcon } from '@/components/colorful-icons';
+import { Button } from '@/components/ui/button';
+import { Card } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -43,26 +48,30 @@ const About = () => {
 
   return (
     <section ref={sectionRef} className="px-8 md:px-20 max-w-7xl mx-auto" id="about">
-      <div className="glass-card rounded-[2rem] p-10 md:p-16 flex flex-col md:flex-row items-center gap-16 overflow-hidden">
+      <Card className="glass-card rounded-[2rem] p-10 md:p-16 flex flex-col md:flex-row items-center gap-16 overflow-hidden border-0 shadow-none bg-transparent">
         {/* Left: Image Visual */}
         <div ref={leftRef} className="flex-1 flex flex-col items-center">
           <div className="w-64 h-64 md:w-80 md:h-80 rounded-[2.5rem] overflow-hidden border-2 border-primary/10 shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-500 mb-8">
-            <img
+            <Image
               alt="Developer Bio Image"
               className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
               src="/ghibliImage.png"
+              width={320}
+              height={320}
             />
           </div>
           {/* Tech Icon Tray */}
           <div className="glass-tray rounded-2xl px-6 py-3 flex items-center gap-6">
-            <span className="text-primary font-bold text-sm bg-primary/10 px-2 py-1 rounded">JS</span>
-            <span className="text-primary font-bold text-sm bg-primary/10 px-2 py-1 rounded">HTML5</span>
-            <img
+            <Badge className="text-primary font-bold text-sm bg-primary/10 px-2 py-1 rounded hover:bg-primary/10">JS</Badge>
+            <Badge className="text-primary font-bold text-sm bg-primary/10 px-2 py-1 rounded hover:bg-primary/10">HTML5</Badge>
+            <Image
               alt="React"
               className="w-6 h-6 opacity-80"
-              src="/ghibliImage.png"
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
+              width={24}
+              height={24}
             />
-            <span className="text-primary font-bold text-sm bg-primary/10 px-2 py-1 rounded">CSS3</span>
+            <Badge className="text-primary font-bold text-sm bg-primary/10 px-2 py-1 rounded hover:bg-primary/10">CSS3</Badge>
           </div>
         </div>
         {/* Right: Text Content */}
@@ -80,26 +89,28 @@ const About = () => {
 
             </p>
             <ul>
-              <li>✔ Frontend Developer (React / Next.js)</li>
-              <li>✔ Focused on UI/UX & Animations</li>
-              <li>✔ Learning Full Stack Development</li>
-              <li>✔ Open for freelance & internships</li>
+              <li className="flex items-center gap-2"><CheckIcon className="w-4 h-4" /> Frontend Developer (React / Next.js)</li>
+              <li className="flex items-center gap-2"><CheckIcon className="w-4 h-4" /> Focused on UI/UX & Animations</li>
+              <li className="flex items-center gap-2"><CheckIcon className="w-4 h-4" /> Learning Full Stack Development</li>
+              <li className="flex items-center gap-2"><CheckIcon className="w-4 h-4" /> Open for freelance & internships</li>
             </ul>
 
           </div>
-          <a
-            href="https://drive.google.com/file/d/17I1BjNsV_zv22glnUboTMWqOCZ3Tnwtl/view?usp=sharing"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="electric-blue-btn px-8 py-3 rounded-xl inline-flex items-center space-x-2 font-semibold mt-4 active:scale-95"
+          <Button
+            asChild
+            className="electric-blue-btn px-8 py-3 rounded-xl inline-flex items-center space-x-2 font-semibold mt-4 active:scale-95 h-auto"
           >
-            <span>View Resume</span>
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"></path>
-            </svg>
-          </a>
+            <a
+              href="https://drive.google.com/file/d/17I1BjNsV_zv22glnUboTMWqOCZ3Tnwtl/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span>View Resume</span>
+              <FileTextIcon className="w-5 h-5" />
+            </a>
+          </Button>
         </div>
-      </div>
+      </Card>
     </section>
   );
 };

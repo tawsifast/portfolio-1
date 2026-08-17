@@ -1,9 +1,12 @@
 'use client';
 
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { motion, Variants } from 'framer-motion';
+import Image from 'next/image';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { Card } from '@/components/ui/card';
+import { Progress } from '@/components/ui/progress';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -22,30 +25,39 @@ const skills = [
   { name: "Figma", icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/figma/figma-original.svg", level: "80%" },
 ];
 
-const Skills = () => {
-  const sectionRef = useRef<HTMLElement>(null);
-  const gridRef = useRef<HTMLDivElement>(null);
+const SkillBar = ({ level }: { level: string }) => {
+  const barRef = useRef<HTMLDivElement>(null);
+  const [value, setValue] = useState(0);
+  const target = parseFloat(level);
 
   useEffect(() => {
-    const ctx = gsap.context(() => {
-      // Animate progress bars using GSAP ScrollTrigger
-      const bars = gridRef.current?.querySelectorAll('.skill-progress');
-      bars?.forEach((bar) => {
-        const targetWidth = (bar as HTMLElement).dataset.width;
-        gsap.to(bar, {
-          width: targetWidth,
-          duration: 1.5,
-          ease: "power2.out",
-          scrollTrigger: {
-            trigger: bar,
-            start: "top 95%",
-          }
-        });
-      });
-    }, sectionRef);
+    const proxy = { v: 0 };
+    const tween = gsap.to(proxy, {
+      v: target,
+      duration: 1.5,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: barRef.current,
+        start: "top 95%",
+      },
+      onUpdate: () => setValue(proxy.v),
+    });
 
-    return () => ctx.revert();
-  }, []);
+    return () => {
+      tween.scrollTrigger?.kill();
+      tween.kill();
+    };
+  }, [target]);
+
+  return (
+    <div ref={barRef} className="w-full">
+      <Progress value={value} className="bg-surface-container-highest h-1.5 rounded-full" />
+    </div>
+  );
+};
+
+const Skills = () => {
+  const sectionRef = useRef<HTMLElement>(null);
 
   const cardVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
@@ -67,7 +79,7 @@ const Skills = () => {
 
   return (
     <section ref={sectionRef} className="px-8 md:px-20 max-w-7xl mx-auto" id="skills">
-      <div className="glass-card rounded-[2rem] p-10 md:p-16 flex flex-col items-center gap-12 relative overflow-hidden">
+      <Card className="glass-card rounded-[2rem] p-10 md:p-16 flex flex-col items-center gap-12 relative overflow-hidden border-0 shadow-none bg-transparent">
         {/* Sapphire Background Glow */}
         <div className="orbital-glow"></div>
         
@@ -78,7 +90,7 @@ const Skills = () => {
           </p>
         </div>
 
-        <div ref={gridRef} className="w-full grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 z-10">
+        <div className="w-full grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 z-10">
           {skills.map((skill, i) => (
             <motion.div
               key={i}
@@ -88,27 +100,24 @@ const Skills = () => {
               whileInView="visible"
               viewport={{ once: true, margin: "-50px" }}
               whileHover="hover"
-              className="skill-card glass-card p-6 rounded-2xl flex flex-col items-center text-center space-y-4 hover:border-primary/40 transition-all duration-300 group"
             >
-              <div className="w-13 h-13 flex items-center justify-center rounded-xl bg-white/5 p-3 group-hover:scale-110 transition-transform">
-                <img 
-                  src={skill.icon} 
-                  alt={skill.name} 
-                  className="w-full h-full object-contain filter brightness-110"
-                />
-              </div>
-              <h3 className="text-on-surface font-semibold text-sm">{skill.name}</h3>
-              <div className="w-full bg-surface-container-highest rounded-full h-1.5 overflow-hidden">
-                <div 
-                  className="skill-progress bg-primary h-1.5 rounded-full" 
-                  style={{ width: "0%" }}
-                  data-width={skill.level}
-                ></div>
-              </div>
+              <Card className="skill-card glass-card p-6 rounded-2xl flex flex-col items-center text-center space-y-4 hover:border-primary/40 transition-all duration-300 group border-0 shadow-none bg-transparent">
+                <div className="w-13 h-13 flex items-center justify-center rounded-xl bg-white/5 p-3 group-hover:scale-110 transition-transform">
+                  <Image
+                    src={skill.icon}
+                    alt={skill.name}
+                    width={32}
+                    height={32}
+                    className="w-full h-full object-contain filter brightness-110"
+                  />
+                </div>
+                <h3 className="text-on-surface font-semibold text-sm">{skill.name}</h3>
+                <SkillBar level={skill.level} />
+              </Card>
             </motion.div>
           ))}
         </div>
-      </div>
+      </Card>
     </section>
   );
 };

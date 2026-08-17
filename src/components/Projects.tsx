@@ -1,17 +1,22 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { motion, Variants } from "framer-motion";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { projects } from "../data/projects";
 import ProjectCard from "./ProjectCard";
+import { Card } from "./ui/card";
+import { Tabs, TabsList, TabsTrigger } from "./ui/tabs";
 
 gsap.registerPlugin(ScrollTrigger);
+
+type ProjectCategory = "all" | "web" | "mobile";
 
 const Projects = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const gridRef = useRef<HTMLDivElement>(null);
+  const [category, setCategory] = useState<ProjectCategory>("all");
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -52,6 +57,11 @@ const Projects = () => {
     },
   };
 
+  const filteredProjects =
+    category === "all"
+      ? projects
+      : projects.filter((p) => p.category === category);
+
   return (
     <section
       ref={sectionRef}
@@ -63,17 +73,16 @@ const Projects = () => {
         <h2 className="text-4xl md:text-5xl font-bold text-on-surface">
           My <span className="gradient-text">Projects</span>
         </h2>
-        <div className="flex justify-center gap-4 mt-6">
-          <button className="tag-pill px-6 py-2 rounded-full text-white text-sm font-medium hover:brightness-110 transition-all">
-            Web Application
-          </button>
-          <button className="border border-white/10 px-6 py-2 rounded-full text-outline text-sm font-medium hover:bg-white/5 transition-colors">
-            Mobile Application
-          </button>
-        </div>
+        <Tabs value={category} onValueChange={(v) => setCategory(v as ProjectCategory)} className="flex flex-col items-center justify-center mt-6">
+          <TabsList className="glass-tray gap-1 rounded-full p-1">
+            <TabsTrigger value="all" className="rounded-full px-6 py-2 data-[state=active]:bg-primary data-[state=active]:text-on-primary">All</TabsTrigger>
+            <TabsTrigger value="web" className="rounded-full px-6 py-2 data-[state=active]:bg-primary data-[state=active]:text-on-primary">Web Application</TabsTrigger>
+            <TabsTrigger value="mobile" className="rounded-full px-6 py-2 data-[state=active]:bg-primary data-[state=active]:text-on-primary">Mobile Application</TabsTrigger>
+          </TabsList>
+        </Tabs>
       </div>
       <div ref={gridRef} className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        {projects.map((project, i) => (
+        {filteredProjects.map((project, i) => (
           <motion.div
             key={project.id}
             custom={i}
@@ -82,9 +91,11 @@ const Projects = () => {
             whileInView="visible"
             viewport={{ once: true, margin: "-50px" }}
             whileHover="hover"
-            className="project-card rounded-2xl p-6 shrink-0 flex flex-col h-full"
+            className="h-full"
           >
-            <ProjectCard project={project} />
+            <Card className="project-card rounded-2xl p-6 shrink-0 flex flex-col h-full border-0 shadow-none bg-transparent">
+              <ProjectCard project={project} />
+            </Card>
           </motion.div>
         ))}
       </div>

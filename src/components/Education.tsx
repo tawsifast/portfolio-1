@@ -1,6 +1,19 @@
 "use client";
 
 import React from "react";
+import {
+  SchoolIcon,
+  MapPinIcon,
+  StarIcon,
+  CheckCircle2Icon,
+  TargetIcon,
+  BrainIcon,
+  BarChart3Icon,
+  Code2Icon,
+  QuoteIcon,
+} from "@/components/colorful-icons";
+import { Card } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 
 const Education = () => {
   return (
@@ -18,10 +31,10 @@ const Education = () => {
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
         {/* Left: Academic Journey */}
-        <div className="lg:col-span-7 bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl md:rounded-[2rem] p-4 sm:p-6 md:p-10 space-y-8">
+        <Card className="lg:col-span-7 bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl md:rounded-[2rem] p-4 sm:p-6 md:p-10 space-y-8 shadow-none">
           <div className="flex items-center gap-4">
             <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
-              <span className="material-symbols-outlined">school</span>
+              <SchoolIcon className="w-6 h-6" />
             </div>
             <div>
               <h3 className="text-2xl font-bold text-white">Academic Journey</h3>
@@ -41,17 +54,17 @@ const Education = () => {
                 <br />
                 <span className="text-primary font-bold text-sm">Present</span>
               </div>
-              <div className="bg-white/5 border border-primary/40 rounded-2xl p-4 md:p-6 shadow-[0_0_15px_rgba(56,189,248,0.2)]">
-                <span className="text-primary font-bold text-sm md:hidden block mb-3">2026 – Present</span>
+              <Card className="bg-white/5 border border-primary/40 rounded-2xl p-4 md:p-6 shadow-[0_0_15px_rgba(56,189,248,0.2)]">
+                <Badge className="text-primary font-bold text-sm md:hidden block mb-3 bg-primary/10">2026 – Present</Badge>
                 <div className="flex flex-col sm:flex-row items-start gap-4">
                   <div className="p-2 bg-primary/20 rounded-lg text-primary flex-shrink-0">
-                    <span className="material-symbols-outlined">school</span>
+                    <SchoolIcon className="w-5 h-5" />
                   </div>
                   <div className="space-y-1 w-full">
                     <h4 className="text-lg font-bold text-white leading-snug">B.Sc (Honours) in Mathematics</h4>
                     <p className="text-primary text-sm font-semibold">2nd Year Running</p>
                     <p className="text-gray-400 text-sm flex items-center gap-1">
-                      <span className="material-symbols-outlined text-sm">location_on</span> Govt. City college
+                      <MapPinIcon className="w-4 h-4" /> Govt. City college
                     </p>
                     <p className="text-gray-500 text-sm pt-2 leading-relaxed">
                       Studying core mathematics including Calculus, Linear Algebra, Real Analysis and Differential
@@ -59,106 +72,106 @@ const Education = () => {
                     </p>
                   </div>
                 </div>
-              </div>
+              </Card>
             </div>
 
           </div>
-        </div>
+        </Card>
 
         {/* Right: Learning & Strengths */}
         <div className="lg:col-span-5 space-y-8">
           {/* What I'm Learning */}
-          <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl md:rounded-[2rem] p-4 sm:p-6 md:p-8">
+          <Card className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl md:rounded-[2rem] p-4 sm:p-6 md:p-8 shadow-none">
             <div className="flex items-center gap-4 mb-6">
               <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
-                <span className="material-symbols-outlined">star</span>
+                <StarIcon className="w-5 h-5" />
               </div>
-              <h3 className="text-xl font-bold text-white">What I'm Learning</h3>
+              <h3 className="text-xl font-bold text-white">What I&apos;m Learning</h3>
             </div>
             <ul className="space-y-4">
               <li className="flex items-center gap-3 text-gray-400 text-base md:text-lg">
-                <span className="material-symbols-outlined text-primary text-xl flex-shrink-0">check_circle</span> Advanced Calculus
+                <CheckCircle2Icon className="w-6 h-6 flex-shrink-0" /> Advanced Calculus
               </li>
               <li className="flex items-center gap-3 text-gray-400 text-base md:text-lg">
-                <span className="material-symbols-outlined text-primary text-xl flex-shrink-0">check_circle</span> Linear Algebra
+                <CheckCircle2Icon className="w-6 h-6 flex-shrink-0" /> Linear Algebra
               </li>
               <li className="flex items-center gap-3 text-gray-400 text-base md:text-lg">
-                <span className="material-symbols-outlined text-primary text-xl flex-shrink-0">check_circle</span> Abstract Algebra
+                <CheckCircle2Icon className="w-6 h-6 flex-shrink-0" /> Abstract Algebra
               </li>
               <li className="flex items-center gap-3 text-gray-400 text-base md:text-lg">
-                <span className="material-symbols-outlined text-primary text-xl flex-shrink-0">check_circle</span> Real Analysis
+                <CheckCircle2Icon className="w-6 h-6 flex-shrink-0" /> Real Analysis
               </li>
               <li className="flex items-center gap-3 text-gray-400 text-base md:text-lg">
-                <span className="material-symbols-outlined text-primary text-xl flex-shrink-0">check_circle</span> Differential Equations
+                <CheckCircle2Icon className="w-6 h-6 flex-shrink-0" /> Differential Equations
               </li>
               <li className="flex items-center gap-3 text-gray-400 text-base md:text-lg">
-                <span className="material-symbols-outlined text-primary text-xl flex-shrink-0">check_circle</span> Numerical Methods
+                <CheckCircle2Icon className="w-6 h-6 flex-shrink-0" /> Numerical Methods
               </li>
             </ul>
-          </div>
+          </Card>
 
         </div>
       </div>
 
       {/* Key Strengths (Full Width) */}
-      <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl md:rounded-[2rem] p-4 sm:p-6 md:p-8 space-y-8">
+      <Card className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl md:rounded-[2rem] p-4 sm:p-6 md:p-8 space-y-8 shadow-none">
         <div className="flex flex-col items-center justify-center text-center gap-3">
           <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
-            <span className="material-symbols-outlined text-2xl">target</span>
+            <TargetIcon className="w-5 h-5" />
           </div>
           <h3 className="text-xl font-bold text-white">Key Strengths</h3>
         </div>
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          <div className="flex flex-col items-center text-center gap-2 p-5 rounded-2xl bg-white/5 border border-white/5 hover:border-primary/30 transition-all duration-300 group">
+          <Card className="flex flex-col items-center text-center gap-2 p-5 rounded-2xl bg-white/5 border border-white/5 hover:border-primary/30 transition-all duration-300 group shadow-none">
             <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform flex-shrink-0">
-              <span className="material-symbols-outlined text-2xl">psychology</span>
+              <BrainIcon className="w-6 h-6" />
             </div>
             <div>
               <h4 className="text-white font-bold text-sm mb-1">Logical Thinking</h4>
               <p className="text-gray-500 text-xs leading-relaxed max-w-xs">Strong foundation in logical reasoning and problem solving.</p>
             </div>
-          </div>
+          </Card>
 
-          <div className="flex flex-col items-center text-center gap-2 p-5 rounded-2xl bg-white/5 border border-white/5 hover:border-primary/30 transition-all duration-300 group">
+          <Card className="flex flex-col items-center text-center gap-2 p-5 rounded-2xl bg-white/5 border border-white/5 hover:border-primary/30 transition-all duration-300 group shadow-none">
             <div className="w-12 h-12 rounded-xl bg-gray-400/10 flex items-center justify-center text-gray-400 group-hover:scale-110 transition-transform flex-shrink-0">
-              <span className="material-symbols-outlined text-2xl">equalizer</span>
+              <BarChart3Icon className="w-6 h-6" />
             </div>
             <div>
               <h4 className="text-white font-bold text-sm mb-1">Analytical Skills</h4>
               <p className="text-gray-500 text-xs leading-relaxed max-w-xs">Ability to analyze complex problems and find effective solutions.</p>
             </div>
-          </div>
+          </Card>
 
-          <div className="flex flex-col items-center text-center gap-2 p-5 rounded-2xl bg-white/5 border border-white/5 hover:border-primary/30 transition-all duration-300 group">
+          <Card className="flex flex-col items-center text-center gap-2 p-5 rounded-2xl bg-white/5 border border-white/5 hover:border-primary/30 transition-all duration-300 group shadow-none">
             <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform flex-shrink-0">
-              <span className="material-symbols-outlined text-2xl">code_blocks</span>
+              <Code2Icon className="w-6 h-6" />
             </div>
             <div>
               <h4 className="text-white font-bold text-sm mb-1">Structured Approach</h4>
               <p className="text-gray-500 text-xs leading-relaxed max-w-xs">Breaking down problems into smaller, manageable parts.</p>
             </div>
-          </div>
+          </Card>
 
-          <div className="flex flex-col items-center text-center gap-2 p-5 rounded-2xl bg-white/5 border border-white/5 hover:border-primary/30 transition-all duration-300 group">
+          <Card className="flex flex-col items-center text-center gap-2 p-5 rounded-2xl bg-white/5 border border-white/5 hover:border-primary/30 transition-all duration-300 group shadow-none">
             <div className="w-12 h-12 rounded-xl bg-gray-400/10 flex items-center justify-center text-gray-400 group-hover:scale-110 transition-transform flex-shrink-0">
-              <span className="material-symbols-outlined text-2xl">brain</span>
+              <BrainIcon className="w-6 h-6" />
             </div>
             <div>
               <h4 className="text-white font-bold text-sm mb-1">Continuous Learning</h4>
               <p className="text-gray-500 text-xs leading-relaxed max-w-xs">Always eager to learn new concepts and technologies.</p>
             </div>
-          </div>
+          </Card>
         </div>
-      </div>
+      </Card>
 
       {/* Bottom Quote */}
-      <div className="bg-white/5 backdrop-blur-md rounded-2xl p-4 md:p-6 border border-white/10">
+      <Card className="bg-white/5 backdrop-blur-md rounded-2xl p-4 md:p-6 border border-white/10 shadow-none">
         <p className="text-gray-400 text-base md:text-lg flex flex-col sm:flex-row items-center justify-center text-center sm:text-left gap-3 md:gap-4">
-          <span className="material-symbols-outlined text-primary text-3xl sm:text-2xl flex-shrink-0">format_quote</span>
+          <QuoteIcon className="w-8 h-8 sm:w-7 sm:h-7 flex-shrink-0" />
           <span>Mathematics teaches us to be precise with logic, and development teaches us to be creative with that logic.</span>
         </p>
-      </div>
+      </Card>
     </section>
   );
 };
