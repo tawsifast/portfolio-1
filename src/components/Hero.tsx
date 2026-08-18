@@ -65,6 +65,28 @@ const Hero = () => {
     },
   };
 
+  const wordContainerVariants: Variants = {
+    hidden: {},
+    visible: {
+      transition: { staggerChildren: 0.06 },
+    },
+  };
+
+  const wordVariants: Variants = {
+    hidden: { opacity: 0, y: 24, filter: "blur(8px)" },
+    visible: {
+      opacity: 1,
+      y: 0,
+      filter: "blur(0px)",
+      transition: {
+        duration: 0.6,
+        ease: EASE_ENTRANCE,
+      },
+    },
+  };
+
+  const splitWords = (text: string) => text.split(" ");
+
   return (
     <section ref={containerRef} className="px-8 md:px-20 max-w-7xl mx-auto" id="hero">
       <GlowCard className="glass-card rounded-[2rem] p-10 md:p-16 grid grid-cols-1 md:grid-cols-2 items-center gap-12 relative overflow-hidden border-0 shadow-none bg-transparent">
@@ -74,11 +96,19 @@ const Hero = () => {
           initial="hidden"
           animate="visible"
         >
-          <motion.h1 variants={itemVariants} className="text-4xl md:text-5xl font-bold mb-4 text-on-surface">
-            Hi, I&apos;m Tawsif
+          <motion.h1 variants={wordContainerVariants} className="text-4xl md:text-5xl font-bold mb-4 text-on-surface">
+            {splitWords("Hi, I'm Tawsif").map((word, i) => (
+              <motion.span key={i} variants={wordVariants} className="inline-block whitespace-nowrap mr-[0.25em]">
+                {word}
+              </motion.span>
+            ))}
           </motion.h1>
-          <motion.h2 variants={itemVariants} className="text-3xl md:text-4xl font-semibold gradient-text mb-6">
-            MERN Stack Developer
+          <motion.h2 variants={wordContainerVariants} className="text-3xl md:text-4xl font-semibold gradient-text mb-6">
+            {splitWords("MERN Stack Developer").map((word, i) => (
+              <motion.span key={i} variants={wordVariants} className="inline-block whitespace-nowrap mr-[0.25em]">
+                {word}
+              </motion.span>
+            ))}
           </motion.h2>
           <motion.p variants={itemVariants} className="text-outline text-lg max-w-md mb-10">
             Building scalable web applications with a focus on performance, maintainability, and seamless user experiences. Turning complex requirements into reliable digital products through modern technologies and thoughtful engineering.

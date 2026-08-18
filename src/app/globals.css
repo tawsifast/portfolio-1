@@ -93,9 +93,20 @@
   }
 
   .gradient-text {
-    background: linear-gradient(135deg, #c4e7ff, #38bdf8);
+    background: linear-gradient(135deg, #c4e7ff, #38bdf8, #7bd0ff, #c4e7ff);
+    background-size: 300% 100%;
+    animation: gradient-shift 6s ease-in-out infinite alternate;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+
+  @keyframes gradient-shift {
+    from {
+      background-position: 0% 50%;
+    }
+    to {
+      background-position: 100% 50%;
+    }
   }
 
   .profile-glow {
