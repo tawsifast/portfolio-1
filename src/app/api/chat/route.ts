@@ -42,7 +42,7 @@ SKILLS:
 - Languages: JavaScript (ES6+), TypeScript, HTML5, CSS3
 - Frontend: React, Next.js, Tailwind CSS, HeroUI, Material UI, Framer Motion
 - Backend: Node.js, Express.js, REST APIs, Better Auth, JWT
-- Database: MongoDB, Mongoose
+- Database: MongoDB, Mongoose, PostgreSQL
 - Payments: Stripe
 - Cloud & Tools: Vercel, Netlify, Cloudinary, GitHub Actions, Git, Figma, VS Code
 

@@ -86,9 +86,9 @@ const About = () => {
           <div className="space-y-4 text-outline-variant leading-relaxed text-white/50 md:text-lg">
 
            <p>
-  I'm a MERN Stack Developer with experience building modern web applications using React, Next.js, TypeScript, Node.js, Express.js, and MongoDB.
+  I&apos;m a MERN Stack Developer with experience building modern web applications using React, Next.js, TypeScript, Node.js, Express.js, and MongoDB.
 
-Through real-world projects, I've developed skills in responsive UI development, REST API integration, authentication, and scalable application architecture.
+Through real-world projects, I&apos;ve developed skills in responsive UI development, REST API integration, authentication, and scalable application architecture.
 
 I enjoy solving problems, learning new technologies, and building applications that prioritize performance, usability, and clean code.
 </p>

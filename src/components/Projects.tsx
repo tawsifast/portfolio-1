@@ -77,10 +77,10 @@ const Projects = () => {
           My <span className="gradient-text">Projects</span>
         </h2>
         <Tabs value={category} onValueChange={(v) => setCategory(v as ProjectCategory)} className="flex flex-col items-center justify-center mt-6">
-          <TabsList className="glass-tray gap-1 rounded-full p-1">
-            <TabsTrigger value="all" className="rounded-full px-6 py-2 data-[state=active]:bg-primary data-[state=active]:text-on-primary">All</TabsTrigger>
-            <TabsTrigger value="web" className="rounded-full px-6 py-2 data-[state=active]:bg-primary data-[state=active]:text-on-primary">Web Application</TabsTrigger>
-            <TabsTrigger value="mobile" className="rounded-full px-6 py-2 data-[state=active]:bg-primary data-[state=active]:text-on-primary">Mobile Application</TabsTrigger>
+          <TabsList className="glass-tray gap-1 rounded-full p-1 max-w-full overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+            <TabsTrigger value="all" className="rounded-full px-4 sm:px-6 py-2 data-[state=active]:bg-[#38bdf8] data-[state=active]:text-[#001e2c]">All</TabsTrigger>
+            <TabsTrigger value="web" className="rounded-full px-4 sm:px-6 py-2 data-[state=active]:bg-[#38bdf8] data-[state=active]:text-[#001e2c]">Web <span className="hidden sm:inline">Application</span></TabsTrigger>
+            <TabsTrigger value="mobile" className="rounded-full px-4 sm:px-6 py-2 data-[state=active]:bg-[#38bdf8] data-[state=active]:text-[#001e2c]">Mobile <span className="hidden sm:inline">Application</span></TabsTrigger>
           </TabsList>
         </Tabs>
       </div>
