@@ -15,8 +15,10 @@ import { EASE_ENTRANCE } from '@/lib/motion';
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
+    email: '',
     projectType: '',
-    message: ''
+    message: '',
+    honeypot: ''
   });
   const [status, setStatus] = useState<'idle' | 'loading'>('idle');
 
@@ -45,7 +47,7 @@ const Contact = () => {
       }
 
       toast.success("Message sent successfully! I'll get back to you soon.");
-      setFormData({ name: '', projectType: '', message: '' });
+      setFormData({ name: '', email: '', projectType: '', message: '', honeypot: '' });
     } catch (error: unknown) {
       const message = error instanceof Error ? error.message : 'Something went wrong. Please try again.';
       toast.error(message);
@@ -76,6 +78,15 @@ const Contact = () => {
           Let’s build something amazing together.
         </motion.p>
         <form onSubmit={handleSubmit} className="w-full max-w-3xl flex flex-col gap-4">
+          <input
+            type="text"
+            name="honeypot"
+            value={formData.honeypot || ''}
+            onChange={handleChange}
+            style={{ display: 'none' }}
+            tabIndex={-1}
+            autoComplete="off"
+          />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="space-y-2 text-left">
               <Label htmlFor="name" className="text-[10px] uppercase tracking-widest text-outline ml-2">Your name</Label>
@@ -87,6 +98,19 @@ const Contact = () => {
                 required
                 placeholder="Name"
                 type="text"
+                className="h-11 px-4 rounded-xl bg-white/5 border border-primary/10 text-on-surface placeholder:text-outline/60 focus:bg-white/[0.08]"
+              />
+            </div>
+            <div className="space-y-2 text-left">
+              <Label htmlFor="email" className="text-[10px] uppercase tracking-widest text-outline ml-2">Your Email *</Label>
+              <Input
+                id="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+                placeholder="you@example.com"
+                type="email"
                 className="h-11 px-4 rounded-xl bg-white/5 border border-primary/10 text-on-surface placeholder:text-outline/60 focus:bg-white/[0.08]"
               />
             </div>
