@@ -1,23 +1,19 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import { motion, Variants } from "framer-motion";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { projects } from "../data/projects";
 import ProjectCard from "./ProjectCard";
 import { Card } from "./ui/card";
-import { Tabs, TabsList, TabsTrigger } from "./ui/tabs";
 import { EASE_ENTRANCE, prefersReducedMotion } from "@/lib/motion";
 
 gsap.registerPlugin(ScrollTrigger);
 
-type ProjectCategory = "all" | "web" | "mobile";
-
 const Projects = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const gridRef = useRef<HTMLDivElement>(null);
-  const [category, setCategory] = useState<ProjectCategory>("all");
 
   useEffect(() => {
     if (prefersReducedMotion()) return;
@@ -60,10 +56,7 @@ const Projects = () => {
     },
   };
 
-  const filteredProjects =
-    category === "all"
-      ? projects
-      : projects.filter((p) => p.category === category);
+  const filteredProjects = projects;
 
   return (
     <section
@@ -76,13 +69,6 @@ const Projects = () => {
         <h2 className="text-4xl md:text-5xl font-bold text-on-surface">
           My <span className="gradient-text">Projects</span>
         </h2>
-        <Tabs value={category} onValueChange={(v) => setCategory(v as ProjectCategory)} className="flex flex-col items-center justify-center mt-6">
-          <TabsList className="glass-tray gap-1 rounded-full p-1 max-w-full overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-            <TabsTrigger value="all" className="rounded-full px-4 sm:px-6 py-2 data-[state=active]:bg-[#38bdf8] data-[state=active]:text-[#001e2c]">All</TabsTrigger>
-            <TabsTrigger value="web" className="rounded-full px-4 sm:px-6 py-2 data-[state=active]:bg-[#38bdf8] data-[state=active]:text-[#001e2c]">Web <span className="hidden sm:inline">Application</span></TabsTrigger>
-            <TabsTrigger value="mobile" className="rounded-full px-4 sm:px-6 py-2 data-[state=active]:bg-[#38bdf8] data-[state=active]:text-[#001e2c]">Mobile <span className="hidden sm:inline">Application</span></TabsTrigger>
-          </TabsList>
-        </Tabs>
       </div>
       <div ref={gridRef} className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {filteredProjects.map((project, i) => (
