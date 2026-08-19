@@ -87,7 +87,7 @@ export default function ChatBot() {
                       href={part}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-violet-400 hover:text-violet-300 underline underline-offset-2 transition-colors break-all"
+                      className="text-sky-400 hover:text-sky-300 underline underline-offset-2 transition-colors break-all"
                     >
                       {part}
                     </a>
@@ -102,7 +102,7 @@ export default function ChatBot() {
           // Project header lines (🚀)
           if (line.startsWith('🚀')) {
             return (
-              <p key={i} className="text-sm font-semibold text-violet-300 leading-relaxed pt-1">
+              <p key={i} className="text-sm font-semibold text-sky-300 leading-relaxed pt-1">
                 {line}
               </p>
             );
@@ -119,7 +119,7 @@ export default function ChatBot() {
 
           // Section divider lines (═══)
           if (line.startsWith('═')) {
-            return <div key={i} className="h-px bg-violet-500/20 my-1" />;
+            return <div key={i} className="h-px bg-sky-400/20 my-1" />;
           }
 
           // Emoji header lines (📧 💼 🔗 🐙 ✅ ❌)
@@ -164,10 +164,10 @@ export default function ChatBot() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1 }}
-        className="group fixed bottom-6 right-6 md:bottom-10 md:right-10 z-50 w-14 h-14 rounded-full bg-gradient-to-br from-violet-600 to-indigo-600 text-white shadow-lg shadow-violet-500/40 focus:outline-none flex items-center justify-center hover:from-violet-500 hover:to-indigo-500"
+        className="group fixed bottom-6 right-6 md:bottom-10 md:right-10 z-50 w-14 h-14 rounded-full bg-gradient-to-br from-sky-500 to-cyan-500 text-white shadow-lg shadow-sky-500/40 focus:outline-none flex items-center justify-center hover:from-sky-400 hover:to-cyan-400"
       >
         {/* Pulse Ring */}
-        <span className="absolute inset-0 rounded-full bg-violet-500/30" />
+        <span className="absolute inset-0 rounded-full bg-sky-400/30" />
 
         {/* Tooltip */}
         {!isOpen && (
@@ -191,11 +191,11 @@ export default function ChatBot() {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.85, y: 20 }}
             transition={{ type: 'spring', stiffness: 300, damping: 25 }}
-            className="fixed bottom-24 right-4 md:right-10 z-50 w-[calc(100vw-2rem)] md:w-[420px] h-[560px] max-h-[calc(100vh-8rem)] rounded-3xl flex flex-col overflow-hidden border border-violet-500/20 shadow-2xl shadow-violet-900/30 bg-[#0d0d1a]/98 backdrop-blur-2xl"
+            className="fixed bottom-24 right-4 md:right-10 z-50 w-[calc(100vw-2rem)] md:w-[420px] h-[560px] max-h-[calc(100vh-8rem)] rounded-3xl flex flex-col overflow-hidden border border-sky-400/20 shadow-2xl shadow-sky-900/30 bg-[#0f1418]/98 backdrop-blur-2xl"
           >
             {/* Header */}
-            <div className="p-4 bg-gradient-to-r from-violet-900/40 to-indigo-900/40 border-b border-violet-500/20 flex items-center gap-3">
-              <Avatar className="w-10 h-10 bg-gradient-to-br from-violet-500 to-indigo-500">
+            <div className="p-4 bg-gradient-to-r from-sky-900/40 to-cyan-900/40 border-b border-sky-400/20 flex items-center gap-3">
+              <Avatar className="w-10 h-10 bg-gradient-to-br from-sky-500 to-cyan-500">
                 <AvatarFallback className="bg-transparent text-white font-bold text-lg">T</AvatarFallback>
               </Avatar>
               <div className="flex-1 min-w-0">
@@ -233,7 +233,7 @@ export default function ChatBot() {
                     className={`flex items-end gap-2 ${m.role === 'user' ? 'justify-end' : 'justify-start'}`}
                   >
                     {m.role === 'assistant' && (
-                      <Avatar className="w-6 h-6 flex-shrink-0 bg-gradient-to-br from-violet-500 to-indigo-500">
+                      <Avatar className="w-6 h-6 flex-shrink-0 bg-gradient-to-br from-sky-500 to-cyan-500">
                         <AvatarFallback className="bg-transparent">
                           <SparklesIcon className="w-3.5 h-3.5" />
                         </AvatarFallback>
@@ -243,7 +243,7 @@ export default function ChatBot() {
                       <div
                         className={`rounded-2xl px-4 py-2.5 text-sm ${
                           m.role === 'user'
-                            ? 'bg-gradient-to-br from-violet-600 to-indigo-600 text-white rounded-br-none'
+                            ? 'bg-gradient-to-br from-sky-600 to-cyan-600 text-white rounded-br-none'
                             : 'bg-white/5 border border-white/10 text-white/90 rounded-bl-none'
                         }`}
                       >
@@ -252,7 +252,7 @@ export default function ChatBot() {
                       <MessageTime />
                     </div>
                     {m.role === 'user' && (
-                      <Avatar className="w-6 h-6 flex-shrink-0 bg-gradient-to-br from-violet-600 to-indigo-600">
+                      <Avatar className="w-6 h-6 flex-shrink-0 bg-gradient-to-br from-sky-600 to-cyan-600">
                         <AvatarFallback className="bg-transparent">
                           <UserIcon className="w-3.5 h-3.5" />
                         </AvatarFallback>
@@ -269,24 +269,24 @@ export default function ChatBot() {
                     animate="animate"
                     className="flex items-end gap-2"
                   >
-                    <Avatar className="w-6 h-6 flex-shrink-0 bg-gradient-to-br from-violet-500 to-indigo-500">
+                    <Avatar className="w-6 h-6 flex-shrink-0 bg-gradient-to-br from-sky-500 to-cyan-500">
                       <AvatarFallback className="bg-transparent">
                         <SparklesIcon className="w-3.5 h-3.5" />
                       </AvatarFallback>
                     </Avatar>
                     <div className="rounded-2xl rounded-bl-none px-4 py-3 bg-white/5 border border-white/10 flex items-center gap-1.5">
                       <motion.div
-                        className="w-2 h-2 bg-violet-400 rounded-full"
+                        className="w-2 h-2 bg-sky-400 rounded-full"
                         animate={{ y: [0, -4, 0] }}
                         transition={{ repeat: Infinity, duration: 0.6, ease: 'easeInOut' }}
                       />
                       <motion.div
-                        className="w-2 h-2 bg-violet-400 rounded-full"
+                        className="w-2 h-2 bg-sky-400 rounded-full"
                         animate={{ y: [0, -4, 0] }}
                         transition={{ repeat: Infinity, duration: 0.6, ease: 'easeInOut', delay: 0.2 }}
                       />
                       <motion.div
-                        className="w-2 h-2 bg-violet-400 rounded-full"
+                        className="w-2 h-2 bg-sky-400 rounded-full"
                         animate={{ y: [0, -4, 0] }}
                         transition={{ repeat: Infinity, duration: 0.6, ease: 'easeInOut', delay: 0.4 }}
                       />
@@ -308,7 +308,7 @@ export default function ChatBot() {
             </ScrollArea>
 
             {/* Input Area */}
-            <form onSubmit={handleSubmit} className="p-4 border-t border-violet-500/10 bg-black/40">
+            <form onSubmit={handleSubmit} className="p-4 border-t border-sky-400/10 bg-black/40">
               <div className="flex gap-2">
                 <Input
                   type="text"
@@ -316,7 +316,7 @@ export default function ChatBot() {
                   onChange={handleInputChange}
                   placeholder="Ask about Tawsif..."
                   disabled={isLoading}
-                  className="flex-1 bg-white/5 border border-violet-500/20 rounded-2xl px-4 py-3 text-sm text-white focus:outline-none focus:border-violet-500/60 focus:ring-2 focus:ring-violet-500/20 transition-colors placeholder:text-white/30 h-auto"
+                  className="flex-1 bg-white/5 border border-sky-400/20 rounded-2xl px-4 py-3 text-sm text-white focus:outline-none focus:border-sky-400/60 focus:ring-2 focus:ring-sky-400/20 transition-colors placeholder:text-white/30 h-auto"
                 />
                 <Button
                   type="submit"
@@ -324,7 +324,7 @@ export default function ChatBot() {
                   variant="ghost"
                   size="icon"
                   aria-label="Send message"
-                  className="bg-gradient-to-br from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 rounded-xl text-white transition-all disabled:opacity-50 disabled:cursor-not-allowed w-11 h-11 flex-shrink-0"
+                  className="bg-gradient-to-br from-sky-500 to-cyan-500 hover:from-sky-400 hover:to-cyan-400 rounded-xl text-white transition-all disabled:opacity-50 disabled:cursor-not-allowed w-11 h-11 flex-shrink-0"
                 >
                   <SendIcon className="w-5 h-5" />
                 </Button>
